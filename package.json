@@ -4,7 +4,12 @@
   "description": "---",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "chmod +x bin/deploy.sh && bin/deploy.sh",
+    "frontend:install": "cd udagram/udagram-frontend && npm install",
+    "backend:install": "cd udagram/udagram-api && npm install",
+    "frontend:build": "cd udagram/udagram-frontend && npm run build",
+    "backend:build": "cd udagram/udagram-api && npm run build"
   },
   "repository": {
     "type": "git",

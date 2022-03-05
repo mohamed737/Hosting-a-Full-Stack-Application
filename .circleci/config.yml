@@ -20,12 +20,30 @@ workflows:
   sample: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     jobs:
-      - node/test:
-          version: "15.1"
-          # after the node/test job completes, build the dist packages and save them to a workspace
-          post-steps:
-            - run: npm run build
-            - aws-s3/copy:
-                from: dist/
-                to: s3://sample-app-vue
-                arguments: --recursive
+      build:
+        docker:
+          - image: "cimg/base:stable"
+        steps:
+          - node/install
+          - checkout
+          - aws-cli/setup
+          - run:
+              name: Front-End Install
+              command: |
+                npm run frontend:install
+          - run:
+              name: Back-End Install
+              command: |
+                npm run backend:install
+          - run:
+              name: Front-End Build
+              command: |
+                npm run frontend:build
+          - run:
+              name: Back-End Build
+              command: |
+                npm run backend:build
+          - run:
+              name: Deploy App
+              command: |
+                npm run deploy
