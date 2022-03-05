@@ -1,0 +1,23 @@
+{
+  "name": "hosting-a-full-stack-application",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamed737/Hosting-a-Full-Stack-Application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohamed737/Hosting-a-Full-Stack-Application/issues"
+  },
+  "homepage": "https://github.com/mohamed737/Hosting-a-Full-Stack-Application#readme",
+  "devDependencies": {
+    "@angular/cli": "^13.2.5"
+  }
+}
