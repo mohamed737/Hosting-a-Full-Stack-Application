@@ -11,7 +11,7 @@
     "clean": "rm -rf www/ || true",
     "build": "npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "do:deploy": "cp -R .elasticbeanstalk www && cd ./www && eb deploy test1-dev && eb setenv DB_PORT=$DB_PORT JWT_SECRET=$JWT_SECRET PORT=$PORT POSTGRES_DB=$POSTGRES_DB POSTGRES_HOST=$POSTGRES_HOST POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_USERNAME=$POSTGRES_USERNAME URL=$URL"
+    "do:deploy": "cp -R .elasticbeanstalk www && cp -R deploy-api.sh www && cd ./www && chmod +x deploy-api.sh && deploy-api.sh"
   },
   "keywords": [],
   "author": "Gabriel Ruttner",
