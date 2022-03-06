@@ -11,7 +11,7 @@
     "clean": "rm -rf www/ || true",
     "build": "npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "do:deploy": "cp -R .elasticbeanstalk www && cp -R deploy-api.sh www && cd ./www && chmod +x deploy-api.sh && deploy-api.sh"
+    "do:deploy": "cp -R .elasticbeanstalk www && cp -R bin www && cd ./www && chmod +x bin/deploy-api.sh && bin/deploy-api.sh"
   },
   "keywords": [],
   "author": "Gabriel Ruttner",
