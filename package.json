@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy:frontend": "chmod +x bin/deploy.sh && bin/deploy.sh",
-    "deploy:backend": "chmod +x bin/deploy-api.sh && bin/deploy-api.sh",
+    "deploy:backend": "cd udagram/udagram-api && npm run do:deploy",
     "frontend:install": "cd udagram/udagram-frontend && npm install",
     "backend:install": "cd udagram/udagram-api && npm install",
     "frontend:build": "cd udagram/udagram-frontend && npm run build",
