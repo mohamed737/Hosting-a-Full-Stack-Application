@@ -11,6 +11,8 @@ running the karma test is in udagram-frontend folder npm run test
 
 # simple diagram giving a high-level overview of the infrastructure
 
+in the root folder `infrastructure.png` show infrastructure diagram 
+
 1-the forntend in udagram-frontend folder is built into www folder insid of it 
 2-it is deployed to aws service called ---> s3
 within it the link of the backend to send requests and data
@@ -23,6 +25,8 @@ within it the link of the backend to send requests and data
 
 
 #  diagram showing the overview of the pipeline.
+
+in the root folder `deploying-process-pipeline.png` show graphically the deployment process 
 
 the database is created with aws service called ---> rds 
 the port host database name and password is passed to the backend in ---> circleci
