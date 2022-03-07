@@ -13,6 +13,7 @@ running the karma test is in udagram-frontend folder npm run test
 
 1-the forntend in udagram-frontend folder is built into www folder insid of it 
 2-it is deployed to aws service called ---> s3
+within it the link of the backend to send requests and data
 
 3-the backend in udagram-api folder it built into www folder
 4-it is deployed to aws service called ---> eb
